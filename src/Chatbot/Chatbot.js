@@ -75,7 +75,7 @@ const Chatbot = () => {
     try {
       
       // send request to the textQuery route
-      const response = await axios.post('/api/dialogflow/textQuery', textQueryVariables)
+      const response = await axios.post('https://dialogflow.transcribestreamingapp.store/api/dialogflow/textQuery', textQueryVariables)
       
       for (let content of response.data.fulfillmentMessages) {
         conversation = {
